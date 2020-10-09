@@ -24,7 +24,7 @@ let allScreens = {
   // MALENA
   'malena_intro': {
     type: 'multiple_choice',
-    text: 'You picked Malena! Nice.',
+    text: 'You wake up at the NCA Cheer finals in Daytona Florida. You are competing for Navarro College under legend Monica Almada. Gabi Butler is concussed and you are sent in by Monica to compete in her place and must choose a partner.',
     prompts: [
       { label: 'Morgan', nextScreen: 'morgan_screen' },
       { label: 'Mackenzie', nextScreen: 'makenzie_screen' },
@@ -32,7 +32,7 @@ let allScreens = {
   },
   'morgan_screen': {
     type: 'multiple_choice',
-    text: 'You picked Morgan! Nice.',
+    text: 'You picked Morgan! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse, David Decastro Acceleration, and Stunt Tossup Double Destabilizer',
     prompts: [
       { label: 'TCBSR', nextScreen: 'morgan_TCBSR' },
       { label: 'DDA', nextScreen: 'morgan_DDA' },
@@ -41,7 +41,7 @@ let allScreens = {
   },
   'makenzie_screen': {
     type: 'multiple_choice',
-    text: 'You picked Makenzie! Nice.',
+    text: 'You picked Makenzie! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse, David Decastro Acceleration, and Stunt Tossup Double Destabilizer',
     prompts: [
       { label: 'TCBSR', nextScreen: 'makenzie_TCBSR' },
       { label: 'DDA', nextScreen: 'makenzie_DDA' },
@@ -50,32 +50,32 @@ let allScreens = {
   },
   'morgan_TCBSR': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'While performing the TCBSR, the person catching you slips on a banana peel and your back is broken',
     prompts: []
   },
   'morgan_DDA': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'The enemy team sabotages the DDA performance by releasing wild jaguars into the NCA facility and you lose and are killed',
     prompts: []
   },
   'morgan_STUDD': {
     isEndingScreen: true,
-    text: 'Win!',
+    text: 'You perform the STUDD flawlessly and win the NCA Championship becoming a friend of Monica for life',
     prompts: []
   },
   'makenzie_TCBSR': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'The TCBSR final pyramid structure loses balance and a rainstorm collapses the ceiling at the facility killing everybody',
     prompts: []
   },
   'makenzie_DDA': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'You perform the DDA almost perfectly but mess up slightly at the end. Navarro recieves second place and Monica leaves Navarro disgraced',
     prompts: []
   },
   'makenzie_STUDD': {
     isEndingScreen: true,
-    text: 'Win!',
+    text: 'You perfrom the STUDD flawlessly and win the NCA championship',
     prompts: []
   },
 
@@ -83,7 +83,7 @@ let allScreens = {
   // JESSE
   'jesse_intro': {
     type: 'multiple_choice',
-    text: 'You picked Jesse! Nice.',
+    text: 'Jesse is called to take the place of the last batter in the world series for the Oakland As after Matt Olson has hyper extended his vastus laterals. You must pick a bat blessed by several Oakland As players and use it to defeat the Detroit Tigers.',
     prompts: [
       { label: 'JL bat', nextScreen: 'JL_screen' },
       { label: 'TLS bat', nextScreen: 'TLS_screen' },
@@ -92,7 +92,7 @@ let allScreens = {
   },
   'JL_screen': {
     type: 'multiple_choice',
-    text: 'You picked JL bat! Nice.',
+    text: 'You picked JL bat! Nice. Choose your MLB power snack',
     prompts: [
       { label: 'Big League Chew', nextScreen: 'JL_BLC' },
       { label: 'Sunflower Seeds', nextScreen: 'JL_SS' },
@@ -100,7 +100,7 @@ let allScreens = {
   },
   'TLS_screen': {
     type: 'multiple_choice',
-    text: 'You picked TLS bat! Nice.',
+    text: 'You picked TLS bat! Nice. Choose your MLB power snack',
     prompts: [
       { label: 'Big League Chew', nextScreen: 'TLS_BLC' },
       { label: 'Sunflower Seeds', nextScreen: 'TLS_SS' },
@@ -108,7 +108,7 @@ let allScreens = {
   },
   'MC_screen': {
     type: 'multiple_choice',
-    text: 'You picked MC bat! Nice.',
+    text: 'You picked MC bat! Nice. Choose your MLB power snack',
     prompts: [
       { label: 'Big League Chew', nextScreen: 'MC_BLC' },
       { label: 'Sunflower Seeds', nextScreen: 'MC_SS' },
@@ -121,32 +121,32 @@ let allScreens = {
  
   'JL_BLC': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'You hit a pitch by Daniel Norris but first basemen Miguel Cabrera catches it and the game is over. Failure.',
     prompts: []
   },
   'JL_SS': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'You are struck out by pitcher Casey Mize and the Tigers win the World Series. The As terminate your contract, Failure.',
     prompts: []
   },
   'TLS_BLC': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'Tarik Skubal throws a fast ball and you hit it to the outer left field but a storm is called and the weather cancels the game leaving it a tie.',
     prompts: []
   },
   'TLS_SS': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'You are pitched a curve ball by Tyler Alexander and you slam it into first baseman Prince Fielder. Your coach takes you out of the game and trades you to Seattle, ouch.',
     prompts: []
   },
   'MC_BLC': {
     isEndingScreen: true,
-    text: 'Win!',
+    text: 'Gregory Soto pitches you a weak ball and you knock it out of the park for a homerun and the As win the world Series. You are worshipped by all of Oakland and become a legend, victory',
     prompts: []
   },
   'MC_SS': {
     isEndingScreen: true,
-    text: 'Lose!',
+    text: 'The ghost of legendary but controversial Tigers player Ty Cobb retursn from the dead and throws a pitch. You hit the ball to another surprisingly undead player Hank Greenburg. You leave the game disturbed by the rise of dead players coming back to life.',
     prompts: []
   },
 
@@ -160,7 +160,7 @@ let allScreens = {
 
   'terra_intro': {
     type: 'multiple_choice',
-    text: 'You picked Terra! Nice. Terra and her family have recently moved from Colorado to Racoon city. However, The Umbrella Corporation is still up to their dirty ways and releases a new starin of zombie virus on the population, causing another zombie outbreak. Now in the midst of all the choas and confucion, a zombie has broken into her house. Terra sees a gun and a fresh banana. What weapon will she choose?' ,
+    text: 'You picked Terra! Nice. Terra and her family have recently moved from Colorado to Racoon city. However, The Umbrella Corporation is still up to their dirty ways and releases a new strain of zombie virus on the population, causing another zombie outbreak. Now in the midst of all the chaos and confusion, a zombie has broken into her house. Terra sees a gun and a fresh banana. What weapon will she choose?' ,
     prompts: [
       { label: 'Banana', nextScreen:'banana_screen'  },
       { label: 'Gun', nextscreen: 'gun_screen' },
