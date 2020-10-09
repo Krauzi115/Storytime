@@ -33,7 +33,7 @@ let allScreens = {
   },
   'morgan_screen': {
     type: 'multiple_choice',
-    text: 'You picked Morgan! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse (TCBSR), David Decastro Acceleration (DDA), and Stunt Tossup Double Destabilizer (STUDD)',
+    text: 'You picked Morgan! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse (TCBSR), David Decastro Acceleration (DDA), and Stunt Tossup Double Destabilizer (STUDD).',
     prompts: [
       { label: 'TCBSR'.red, nextScreen: 'morgan_TCBSR' },
       { label: 'DDA'.red, nextScreen: 'morgan_DDA' },
@@ -42,7 +42,7 @@ let allScreens = {
   },
   'makenzie_screen': {
     type: 'multiple_choice',
-    text: 'You picked Makenzie! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse, David Decastro Acceleration, and Stunt Tossup Double Destabilizer',
+    text: 'You picked Makenzie! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse, David Decastro Acceleration, and Stunt Tossup Double Destabilizer.',
     prompts: [
       { label: 'TCBSR'.red, nextScreen: 'makenzie_TCBSR' },
       { label: 'DDA'.red, nextScreen: 'makenzie_DDA' },
@@ -51,27 +51,27 @@ let allScreens = {
   },
   'morgan_TCBSR': {
     isEndingScreen: true,
-    text: 'While performing the TCBSR, the person catching you slips on a banana peel and your back is broken',
+    text: 'While performing the TCBSR, the person catching you slips on a banana peel and your back is broken.',
   },
   'morgan_DDA': {
     isEndingScreen: true,
-    text: 'The enemy team sabotages the DDA performance by releasing wild jaguars into the NCA facility and you lose and are killed',
+    text: 'The enemy team sabotages the DDA performance by releasing wild jaguars into the NCA facility and you lose and are killed.',
   },
   'morgan_STUDD': {
     isEndingScreen: true,
-    text: 'You perform the STUDD flawlessly and win the NCA Championship becoming a friend of Monica for life',
+    text: 'You perform the STUDD flawlessly and win the NCA Championship becoming a friend of Monica for life.',
   },
   'makenzie_TCBSR': {
     isEndingScreen: true,
-    text: 'The TCBSR final pyramid structure loses balance and a rainstorm collapses the ceiling at the facility killing everybody',
+    text: 'The TCBSR final pyramid structure loses balance and a rainstorm collapses the ceiling at the facility killing everybody.',
   },
   'makenzie_DDA': {
     isEndingScreen: true,
-    text: 'You perform the DDA almost perfectly but mess up slightly at the end. Navarro recieves second place and Monica leaves Navarro disgraced',
+    text: 'You perform the DDA almost perfectly but mess up slightly at the end. Navarro recieves second place and Monica leaves Navarro disgraced.',
   },
   'makenzie_STUDD': {
     isEndingScreen: true,
-    text: 'You perfrom the STUDD flawlessly and win the NCA championship',
+    text: 'You perfrom the STUDD flawlessly and win the NCA championship.',
   },
 
 
@@ -87,7 +87,7 @@ let allScreens = {
   },
   'JL_screen': {
     type: 'multiple_choice',
-    text: 'You picked JL bat! Nice. Choose your MLB power snack',
+    text: 'You picked JL bat! Nice. Choose your MLB power snack:',
     prompts: [
       { label: 'Big League Chew'.red, nextScreen: 'JL_BLC' },
       { label: 'Sunflower Seeds'.red, nextScreen: 'JL_SS' },
@@ -95,7 +95,7 @@ let allScreens = {
   },
   'TLS_screen': {
     type: 'multiple_choice',
-    text: 'You picked TLS bat! Nice. Choose your MLB power snack',
+    text: 'You picked TLS bat! Nice. Choose your MLB power snack:',
     prompts: [
       { label: 'Big League Chew'.red, nextScreen: 'TLS_BLC' },
       { label: 'Sunflower Seeds'.red, nextScreen: 'TLS_SS' },
@@ -103,7 +103,7 @@ let allScreens = {
   },
   'MC_screen': {
     type: 'multiple_choice',
-    text: 'You picked MC bat! Nice. Choose your MLB power snack',
+    text: 'You picked MC bat! Nice. Choose your MLB power snack:',
     prompts: [
       { label: 'Big League Chew'.red, nextScreen: 'MC_BLC' },
       { label: 'Sunflower Seeds'.red, nextScreen: 'MC_SS' },
@@ -214,7 +214,7 @@ function displayScreen(screenName) {
       console.log(`[${position}] ${prompt.label}`)
     }
 
-    let choice = readlineSync.question('What is your choice?'.green);
+    let choice = readlineSync.question('What is your choice? '.green);
 
     // TODO: Handle bad user input (not a number, out of range, etc.)
     let index = parseInt(choice) - 1;
