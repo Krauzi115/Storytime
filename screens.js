@@ -4,19 +4,21 @@ let readlineSync = require('readline-sync');
 let userResponses = {};
 
 let allScreens = {
+  'start_screen': {
+    type: 'multiple_choice',
+    text: 'Ahoy weary traveler! Who are you?',
+    prompts: [
+      { label: 'Continue', nextScreen: 'character_screen' },
+    ]
+  },
   'character_screen': {
     type: 'multiple_choice',
-    text: 'Hello, this is the text we show on a particular screen',
+    text: 'Choose your character!',
     prompts: [
       { label: 'Malena', nextScreen: 'malena_intro' },
       { label: 'Jesse', nextScreen: 'jesse_intro' },
       { label: 'Terra', nextScreen: 'terra_intro' },
     ]
-  },
-  'motto_screen': {
-    type: 'free_entry',
-    text: 'Yadda yada',
-    prompt: { label: 'Enter your motto:', nextScreen: 'game_over' },
   },
   'malena_intro': {
     type: 'multiple_choice',
@@ -25,6 +27,44 @@ let allScreens = {
       { label: 'Continue', nextScreen: 'motto_screen' }
     ]
   },
+  'morgan': {
+    type: 'multiple_choice',
+    text: 'You picked Malena! Nice.',
+    prompts: [
+      { label: 'Continue', nextScreen: 'motto_screen' }
+    ]
+  },  
+  'makenzie': {
+    type: 'multiple_choice',
+    text: 'You picked Malena! Nice.',
+    prompts: [
+      { label: 'Continue', nextScreen: 'motto_screen' }
+    ]
+  },
+  'makenzie_TCBSR': {
+    type: 'multiple_choice',
+    text: 'You picked Malena! Nice.',
+    prompts: [
+      { label: 'Continue', nextScreen: 'motto_screen' }
+    ]
+  },
+  'makenzie_DDA': {
+    type: 'multiple_choice',
+    text: 'You picked Malena! Nice.',
+    prompts: [
+      { label: 'Continue', nextScreen: 'motto_screen' }
+    ]
+  },
+  'makenzie_STUDD': {
+    type: 'multiple_choice',
+    text: 'You picked Malena! Nice.',
+    prompts: [
+      { label: 'Continue', nextScreen: 'motto_screen' }
+    ]
+  },
+
+
+
   'jesse_intro': {
     type: 'multiple_choice',
     text: 'You picked Jesse! Nice.',
@@ -38,6 +78,31 @@ let allScreens = {
     prompts: [
       { label: 'Continue', nextScreen: 'motto_screen' }
     ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'game_over': {
+    isEndingScreen: true,
+    text: 'All done!',
+    prompts: []
   },
   'game_over': {
     isEndingScreen: true,
@@ -95,4 +160,4 @@ function displayScreen(screenName) {
   }
 }
 
-displayScreen('character_screen');
+displayScreen('start_screen');
