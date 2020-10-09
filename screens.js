@@ -20,58 +20,139 @@ let allScreens = {
       { label: 'Terra', nextScreen: 'terra_intro' },
     ]
   },
+
+  // MALENA
   'malena_intro': {
     type: 'multiple_choice',
     text: 'You picked Malena! Nice.',
     prompts: [
-      { label: 'Continue', nextScreen: 'motto_screen' }
+      { label: 'Morgan', nextScreen: 'morgan_screen' },
+      { label: 'Mackenzie', nextScreen: 'makenzie_screen' },
     ]
   },
-  'morgan': {
+  'morgan_screen': {
     type: 'multiple_choice',
-    text: 'You picked Malena! Nice.',
+    text: 'You picked Morgan! Nice.',
     prompts: [
-      { label: 'Continue', nextScreen: 'motto_screen' }
+      { label: 'TCBSR', nextScreen: 'morgan_TCBSR' },
+      { label: 'DDA', nextScreen: 'morgan_DDA' },
+      { label: 'STUDD', nextScreen: 'morgan_STUDD' },
     ]
-  },  
-  'makenzie': {
+  },
+  'makenzie_screen': {
     type: 'multiple_choice',
-    text: 'You picked Malena! Nice.',
+    text: 'You picked Makenzie! Nice.',
     prompts: [
-      { label: 'Continue', nextScreen: 'motto_screen' }
+      { label: 'TCBSR', nextScreen: 'makenzie_TCBSR' },
+      { label: 'DDA', nextScreen: 'makenzie_DDA' },
+      { label: 'STUDD', nextScreen: 'makenzie_STUDD' },
     ]
+  },
+  'morgan_TCBSR': {
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
+  },
+  'morgan_DDA': {
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
+  },
+  'morgan_STUDD': {
+    isEndingScreen: true,
+    text: 'Win!',
+    prompts: []
   },
   'makenzie_TCBSR': {
-    type: 'multiple_choice',
-    text: 'You picked Malena! Nice.',
-    prompts: [
-      { label: 'Continue', nextScreen: 'motto_screen' }
-    ]
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
   },
   'makenzie_DDA': {
-    type: 'multiple_choice',
-    text: 'You picked Malena! Nice.',
-    prompts: [
-      { label: 'Continue', nextScreen: 'motto_screen' }
-    ]
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
   },
   'makenzie_STUDD': {
-    type: 'multiple_choice',
-    text: 'You picked Malena! Nice.',
-    prompts: [
-      { label: 'Continue', nextScreen: 'motto_screen' }
-    ]
+    isEndingScreen: true,
+    text: 'Win!',
+    prompts: []
   },
 
 
-
+  // JESSE
   'jesse_intro': {
     type: 'multiple_choice',
     text: 'You picked Jesse! Nice.',
     prompts: [
-      { label: 'Continue', nextScreen: 'motto_screen' }
+      { label: 'JL bat', nextScreen: 'JL_screen' },
+      { label: 'TLS bat', nextScreen: 'TLS_screen' },
+      { label: 'MC bat', nextScreen: 'MC_screen' },
     ]
   },
+  'JL_screen': {
+    type: 'multiple_choice',
+    text: 'You picked JL bat! Nice.',
+    prompts: [
+      { label: 'Big League Chew', nextScreen: 'JL_BLC' },
+      { label: 'Sunflower Seeds', nextScreen: 'JL_SS' },
+    ]
+  },
+  'TLS_screen': {
+    type: 'multiple_choice',
+    text: 'You picked TLS bat! Nice.',
+    prompts: [
+      { label: 'Big League Chew', nextScreen: 'TLS_BLC' },
+      { label: 'Sunflower Seeds', nextScreen: 'TLS_SS' },
+    ]
+  },
+  'MC_screen': {
+    type: 'multiple_choice',
+    text: 'You picked MC bat! Nice.',
+    prompts: [
+      { label: 'Big League Chew', nextScreen: 'MC_BLC' },
+      { label: 'Sunflower Seeds', nextScreen: 'MC_SS' },
+    ]
+  },
+  'JL_BLC': {
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
+  },
+  'JL_SS': {
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
+  },
+  'TLS_BLC': {
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
+  },
+  'TLS_SS': {
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
+  },
+  'MC_BLC': {
+    isEndingScreen: true,
+    text: 'Win!',
+    prompts: []
+  },
+  'MC_SS': {
+    isEndingScreen: true,
+    text: 'Lose!',
+    prompts: []
+  },
+
+
+
+
+
+
+
+
+
   'terra_intro': {
     type: 'multiple_choice',
     text: 'You picked Malena! Nice.',
