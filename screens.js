@@ -1,5 +1,6 @@
 let process = require('process');
 let readlineSync = require('readline-sync');
+let colors = require('colors');
 
 let userResponses = {};
 
@@ -8,16 +9,16 @@ let allScreens = {
     type: 'multiple_choice',
     text: 'Ahoy weary traveler! Who are you?',
     prompts: [
-      { label: 'Continue', nextScreen: 'character_screen' },
+      { label: 'Continue'.blue, nextScreen: 'character_screen' },
     ]
   },
   'character_screen': {
     type: 'multiple_choice',
     text: 'Choose your character!',
     prompts: [
-      { label: 'Malena', nextScreen: 'malena_intro' },
-      { label: 'Jesse', nextScreen: 'jesse_intro' },
-      { label: 'Terra', nextScreen: 'terra_intro' },
+      { label: 'Malena'.red, nextScreen: 'malena_intro' },
+      { label: 'Jesse'.red, nextScreen: 'jesse_intro' },
+      { label: 'Terra'.red, nextScreen: 'terra_intro' },
     ]
   },
 
@@ -32,7 +33,7 @@ let allScreens = {
   },
   'morgan_screen': {
     type: 'multiple_choice',
-    text: 'You picked Morgan! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse, David Decastro Acceleration, and Stunt Tossup Double Destabilizer',
+    text: 'You picked Morgan! Decide which move to pull off. Choices are Tripple Canopy Banana Split Reverse (TCBSR), David Decastro Acceleration (DDA), and Stunt Tossup Double Destabilizer (STUDD)',
     prompts: [
       { label: 'TCBSR', nextScreen: 'morgan_TCBSR' },
       { label: 'DDA', nextScreen: 'morgan_DDA' },
@@ -51,32 +52,26 @@ let allScreens = {
   'morgan_TCBSR': {
     isEndingScreen: true,
     text: 'While performing the TCBSR, the person catching you slips on a banana peel and your back is broken',
-    prompts: []
   },
   'morgan_DDA': {
     isEndingScreen: true,
     text: 'The enemy team sabotages the DDA performance by releasing wild jaguars into the NCA facility and you lose and are killed',
-    prompts: []
   },
   'morgan_STUDD': {
     isEndingScreen: true,
     text: 'You perform the STUDD flawlessly and win the NCA Championship becoming a friend of Monica for life',
-    prompts: []
   },
   'makenzie_TCBSR': {
     isEndingScreen: true,
     text: 'The TCBSR final pyramid structure loses balance and a rainstorm collapses the ceiling at the facility killing everybody',
-    prompts: []
   },
   'makenzie_DDA': {
     isEndingScreen: true,
     text: 'You perform the DDA almost perfectly but mess up slightly at the end. Navarro recieves second place and Monica leaves Navarro disgraced',
-    prompts: []
   },
   'makenzie_STUDD': {
     isEndingScreen: true,
     text: 'You perfrom the STUDD flawlessly and win the NCA championship',
-    prompts: []
   },
 
 
@@ -85,9 +80,9 @@ let allScreens = {
     type: 'multiple_choice',
     text: 'Jesse is called to take the place of the last batter in the world series for the Oakland As after Matt Olson has hyper extended his vastus laterals. You must pick a bat blessed by several Oakland As players and use it to defeat the Detroit Tigers.',
     prompts: [
-      { label: 'JL bat', nextScreen: 'JL_screen' },
-      { label: 'TLS bat', nextScreen: 'TLS_screen' },
-      { label: 'MC bat', nextScreen: 'MC_screen' },
+      { label: 'Jesus Lezardo bat', nextScreen: 'JL_screen' },
+      { label: 'Tommy La Stella bat', nextScreen: 'TLS_screen' },
+      { label: 'Matt Chapman bat', nextScreen: 'MC_screen' },
     ]
   },
   'JL_screen': {
@@ -117,32 +112,26 @@ let allScreens = {
   'JL_BLC': {
     isEndingScreen: true,
     text: 'You hit a pitch by Daniel Norris but first basemen Miguel Cabrera catches it and the game is over. Failure.',
-    prompts: []
   },
   'JL_SS': {
     isEndingScreen: true,
     text: 'You are struck out by pitcher Casey Mize and the Tigers win the World Series. The As terminate your contract, Failure.',
-    prompts: []
   },
   'TLS_BLC': {
     isEndingScreen: true,
     text: 'Tarik Skubal throws a fast ball and you hit it to the outer left field but a storm is called and the weather cancels the game leaving it a tie.',
-    prompts: []
   },
   'TLS_SS': {
     isEndingScreen: true,
     text: 'You are pitched a curve ball by Tyler Alexander and you slam it into first baseman Prince Fielder. Your coach takes you out of the game and trades you to Seattle, ouch.',
-    prompts: []
   },
   'MC_BLC': {
     isEndingScreen: true,
     text: 'Gregory Soto pitches you a weak ball and you knock it out of the park for a homerun and the As win the world Series. You are worshipped by all of Oakland and become a legend, victory',
-    prompts: []
   },
   'MC_SS': {
     isEndingScreen: true,
     text: 'The ghost of legendary but controversial Tigers player Ty Cobb retursn from the dead and throws a pitch. You hit the ball to another surprisingly undead player Hank Greenburg. You leave the game disturbed by the rise of dead players coming back to life.',
-    prompts: []
   },
 
 
@@ -200,24 +189,14 @@ let allScreens = {
     isEndingScreen: true,
     text: 'You and your family have successfully driven outside of Racoon City escaping the evil horde of the undead and the Umbrella Corporation',
   },
-  // 'game_over': {
-  //   isEndingScreen: true,
-  //   text: 'All done!',
-  //   prompts: []
-  // },
-  // 'game_over': {
-  //   isEndingScreen: true,
-  //   text: 'All done!',
-  //   prompts: []
-  // }
 };
 
 function displayScreen(screenName) {
-  console.log('----- DEBUG INFO -----');
-  console.log('screenName is:', screenName);
-  console.log('userResponses is:', userResponses);
-  console.log('----- DEBUG INFO -----');
-  console.log('');
+//   console.log('----- DEBUG INFO -----');
+//   console.log('screenName is:', screenName);
+//   console.log('userResponses is:', userResponses);
+//   console.log('----- DEBUG INFO -----');
+//   console.log('');
 
   let screen = allScreens[screenName];
 
@@ -243,7 +222,7 @@ function displayScreen(screenName) {
 
     userResponses[screenName] = chosenPrompt.label;
 
-    console.log(`You chose '${chosenPrompt.label}'`);
+    // console.log(`You chose '${chosenPrompt.label}'`);
     displayScreen(chosenPrompt.nextScreen);
 
   } else if (screen.type === 'free_entry') {
