@@ -115,7 +115,7 @@ let allScreens = {
   },
   'JL_SS': {
     isEndingScreen: true,
-    text: 'You are struck out by pitcher Casey Mize and the Tigers win the World Series. The As terminate your contract, Failure.',
+    text: 'You are struck out by pitcher Casey Mize and the Tigers win the World Series. The As terminate your contract. Failure.',
   },
   'TLS_BLC': {
     isEndingScreen: true,
@@ -123,11 +123,11 @@ let allScreens = {
   },
   'TLS_SS': {
     isEndingScreen: true,
-    text: 'You are pitched a curve ball by Tyler Alexander and you slam it into first baseman Prince Fielder. Your coach takes you out of the game and trades you to Seattle, ouch.',
+    text: 'You are pitched a curve ball by Tyler Alexander and you slam it into first baseman Prince Fielder. Your coach takes you out of the game and trades you to Seattle. Ouch.',
   },
   'MC_BLC': {
     isEndingScreen: true,
-    text: 'Gregory Soto pitches you a weak ball and you knock it out of the park for a homerun and the As win the world Series. You are worshipped by all of Oakland and become a legend, victory',
+    text: 'Gregory Soto pitches you a weak ball and you knock it out of the park for a homerun and the As win the world Series. You are worshipped by all of Oakland and become a legend. Victory!',
   },
   'MC_SS': {
     isEndingScreen: true,
@@ -139,7 +139,7 @@ let allScreens = {
   // TERRA
   'terra_intro': {
     type: 'multiple_choice',
-    text: 'You picked Terra! Nice. You and your family have recently moved from Colorado to Racoon city. However, The Umbrella Corporation is still up to their dirty ways and releases a new strain of zombie virus on the population, causing another zombie outbreak. Now, in the midst of all the choas and confusion, a zombie has broken into your house. You see a gun and a fresh banana. What weapon will you choose?',
+    text: 'You picked Terra! Nice. You and your family have recently moved from Colorado to Racoon city. However, The Umbrella Corporation is still up to their dirty ways and releases a new strain of zombie virus on the population, causing another zombie outbreak. Now, in the midst of all the chaos and confusion, a zombie has broken into your house. You see a gun and a fresh banana. What weapon will you choose?',
     prompts: [
       { label: 'Banana'.red, nextScreen:'banana_screen'  },
       { label: 'Gun'.red, nextScreen: 'gun_screen' }, // mistake was nextscreen vs nextScreen. It was the lower case s
